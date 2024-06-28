@@ -2,12 +2,13 @@ from selenium import webdriver
 from selenium.common import NoSuchElementException
 from selenium.webdriver.common.by import By
 from time import sleep
+import os
 
 PROMISED_DOWN = 750
 PROMISED_UP = 40
 URL_SPEEDTEST = "https://www.speedtest.net/"
-TWITTER_EMAIL = "mypytestemail11@gmail.com"
-TWITTER_PASSWORD = "cM5kb6LphmLd3@!S"
+TWITTER_EMAIL = os.environ.get("TWIT_EMAIL")
+TWITTER_PASSWORD = os.environ.get("TWIT_PASSWORD")
 URL_TWITTER = "https://twitter.com/?lang=en"
 
 
